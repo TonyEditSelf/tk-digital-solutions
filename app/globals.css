@@ -77,6 +77,31 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
   }
+
+  /* === Theme C: Cream sections === */
+  .cream-section {
+    background: #F8F3E8;
+    color: #0B1C2C;
+  }
+  .cream-section .text-foreground { color: #0B1C2C !important; }
+  .cream-section .text-foreground\/90 { color: #0B1C2C !important; }
+  .cream-section .text-muted-foreground { color: #5a6a7a !important; }
+  .cream-card {
+    background: #EFE8D6;
+    border: 1px solid rgba(11, 28, 44, 0.08);
+    box-shadow: 0 2px 12px rgba(11, 28, 44, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .cream-card:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
+    transform: translateY(-4px);
+  }
+  .cream-card-highlight {
+    background: linear-gradient(180deg, rgba(212,175,55,0.15) 0%, #EFE8D6 100%);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
+  }
 }
 
 /* subtle scrollbar */
