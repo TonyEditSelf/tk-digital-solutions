@@ -4,13 +4,13 @@ import { TESTIMONIALS } from "@/lib/constants";
 
 export default function Testimonials() {
   return (
-    <section className="cream-section py-28 border-y border-gold-500/20">
+    <section className="py-28 bg-navy-900/40 border-y border-gold-500/10">
       <div className="container">
         <div className="max-w-3xl mb-16">
-          <div className="inline-block text-xs uppercase tracking-[0.3em] text-gold-600 mb-4 border border-gold-500/40 rounded-full px-4 py-1.5">
+          <div className="inline-block text-xs uppercase tracking-[0.3em] text-gold-500 mb-4 border border-gold-500/30 rounded-full px-4 py-1.5">
             Testimonials
           </div>
-          <h2 className="font-display text-4xl md:text-6xl font-semibold leading-tight text-navy-900">
+          <h2 className="font-display text-4xl md:text-6xl font-semibold leading-tight">
             Trusted by <span className="text-gold-gradient">ambitious brands</span>.
           </h2>
         </div>

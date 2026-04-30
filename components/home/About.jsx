@@ -1,15 +1,15 @@
 // components/home/About.jsx
 export default function About() {
   return (
-    <section className="cream-section py-28 relative">
+    <section className="py-28 relative">
       <div className="container max-w-5xl text-center">
-        <div className="inline-block text-xs uppercase tracking-[0.3em] text-gold-600 mb-6 border border-gold-500/40 rounded-full px-4 py-1.5">
+        <div className="inline-block text-xs uppercase tracking-[0.3em] text-gold-500 mb-6 border border-gold-500/30 rounded-full px-4 py-1.5">
           About Us
         </div>
-        <h2 className="font-display text-4xl md:text-6xl font-semibold leading-tight mb-8 text-navy-900">
+        <h2 className="font-display text-4xl md:text-6xl font-semibold leading-tight mb-8">
           We turn digital noise into <span className="text-gold-gradient">measurable growth</span>.
         </h2>
-        <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto" style={{ color: "#3a4a5a" }}>
+        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
           TK Digital Solutions is a premium digital growth partner for ambitious businesses. We combine sharp strategy, elegant creative, and powerful automation to help you build a brand that looks premium, performs consistently, and scales without chaos. No fluff. No jargon. Just clear outcomes.
         </p>
         <div className="mt-12 grid grid-cols-3 gap-6 max-w-3xl mx-auto">
