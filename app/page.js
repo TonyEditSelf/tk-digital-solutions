@@ -17,7 +17,8 @@ const App = () => {
       <Services />
       <HowItWorks />
       <FocusAreas />
-      <Testimonials />
+      {/* Testimonials hidden until real ones are ready — uncomment when you have them */}
+      {/* <Testimonials /> */}
       <CTA />
     </>
   );
