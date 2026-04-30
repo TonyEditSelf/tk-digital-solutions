@@ -2,7 +2,7 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, ShieldCheck, Zap } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -52,18 +52,22 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Trust line */}
-          <div className="mt-16 flex items-center gap-8 flex-wrap">
-            <div className="flex items-center gap-2">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-gold-gradient border-2 border-navy-900" />
-                ))}
-              </div>
-              <span className="text-sm text-muted-foreground"><span className="text-gold-500 font-semibold">50+</span> brands growing with us</span>
+          {/* Trust line — honest value props instead of fake metrics */}
+          <div className="mt-16 flex items-center gap-6 flex-wrap text-sm">
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <ShieldCheck className="h-4 w-4 text-gold-500" />
+              <span>Premium-only delivery</span>
             </div>
-            <div className="h-6 w-px bg-gold-500/20 hidden sm:block" />
-            <div className="text-sm text-muted-foreground">★ <span className="text-gold-500 font-semibold">4.9/5</span> client satisfaction</div>
+            <div className="h-4 w-px bg-gold-500/20 hidden sm:block" />
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Zap className="h-4 w-4 text-gold-500" />
+              <span>24-hour response time</span>
+            </div>
+            <div className="h-4 w-px bg-gold-500/20 hidden sm:block" />
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Sparkles className="h-4 w-4 text-gold-500" />
+              <span>Founder-led service</span>
+            </div>
           </div>
         </div>
       </div>
