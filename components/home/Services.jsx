@@ -1,4 +1,5 @@
 // components/home/Services.jsx
+import Link from "next/link";
 import { Share2, PenTool, Layout, Video, Target, Cog, ArrowUpRight } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
 
@@ -21,7 +22,11 @@ export default function Services() {
           {SERVICES.map((s) => {
             const Icon = ICONS[s.icon];
             return (
-              <div key={s.title} className="glass-card glass-card-hover rounded-2xl p-8 group cursor-pointer">
+              <Link
+                key={s.title}
+                href={`/services/${s.slug}`}
+                className="block glass-card glass-card-hover rounded-2xl p-8 group cursor-pointer"
+              >
                 <div className="flex items-start justify-between mb-6">
                   <div className="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors">
                     <Icon className="h-6 w-6 text-gold-500" />
@@ -30,7 +35,10 @@ export default function Services() {
                 </div>
                 <h3 className="font-display text-2xl font-semibold mb-3">{s.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
-              </div>
+                <div className="mt-5 text-xs uppercase tracking-[0.25em] text-gold-500 opacity-0 group-hover:opacity-100 transition-opacity font-semibold">
+                  Explore →
+                </div>
+              </Link>
             );
           })}
         </div>
