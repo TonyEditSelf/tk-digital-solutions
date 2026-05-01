@@ -38,7 +38,7 @@ const ServicePage = ({ params }) => {
       </div>
 
       <ServiceHero service={service} />
-      <ServiceMedia title={service.title} />
+      <ServiceMedia title={service.title} slug={service.slug} />
       <ServiceDescription service={service} />
 
       {/* Bottom CTA linking to central plans page */}
