@@ -1,24 +1,27 @@
 // app/page.js
 import Hero from "@/components/home/Hero";
-import ValueStrip from "@/components/home/ValueStrip";
 import About from "@/components/home/About";
-import Services from "@/components/home/Services";
 import HowItWorks from "@/components/home/HowItWorks";
-import FocusAreas from "@/components/home/FocusAreas";
-import Testimonials from "@/components/home/Testimonials";
+// import FocusAreas from "@/components/home/FocusAreas";
+import ValuePropositionStatement from "@/components/home/ValuePropositionStatement";
+// import Testimonials from "@/components/home/zzTestimonials";
+import WhatYouGet from "@/components/home/WhatYouGet";
+import WhatIBuild from "@/components/home/WhatIBuild";
 import CTA from "@/components/home/CTA";
 
 const App = () => {
   return (
     <>
       <Hero />
-      <ValueStrip />
-      <About />
-      <Services />
+      <ValuePropositionStatement />
+      <WhatYouGet />
+      {/* <ValueStrip /> */}
+      <WhatIBuild />
       <HowItWorks />
-      <FocusAreas />
+      {/* <FocusAreas /> */}
       {/* Testimonials hidden until real ones are ready — uncomment when you have them */}
       {/* <Testimonials /> */}
+      <About />
       <CTA />
     </>
   );

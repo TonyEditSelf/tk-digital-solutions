@@ -16,8 +16,12 @@ export default function ValueStrip() {
                 <Icon className="h-5 w-5 text-gold-500" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">{v.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
+                <h3 className="font-semibold text-foreground mb-1">
+                  {v.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {v.desc}
+                </p>
               </div>
             </div>
           );

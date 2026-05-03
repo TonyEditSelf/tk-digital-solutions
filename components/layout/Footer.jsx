@@ -14,21 +14,30 @@ export default function Footer() {
               TK
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="text-base font-semibold text-gold-gradient">{BRAND.shortName}</span>
-              <span className="text-[10px] tracking-[0.25em] text-muted-foreground uppercase">Digital Solutions</span>
+              <span className="text-base font-semibold text-gold-gradient">
+                {BRAND.shortName}
+              </span>
+              <span className="text-[10px] tracking-[0.25em] text-muted-foreground uppercase">
+                Build. Automate. Grow.
+              </span>
             </div>
           </div>
           <p className="text-muted-foreground max-w-md leading-relaxed">
-            Premium digital growth partner for ambitious businesses. Strategy, content, systems — built to scale.
+            Websites, automation, and content systems that work together.
           </p>
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-gold-500 mb-4 tracking-wide uppercase">Navigate</h4>
+          <h4 className="text-sm font-semibold text-gold-500 mb-4 tracking-wide uppercase">
+            Navigate
+          </h4>
           <ul className="space-y-3">
             {NAV_LINKS.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="text-muted-foreground hover:text-gold-500 transition-colors text-sm">
+                <Link
+                  href={l.href}
+                  className="text-muted-foreground hover:text-gold-500 transition-colors text-sm"
+                >
                   {l.label}
                 </Link>
               </li>
@@ -37,17 +46,30 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-gold-500 mb-4 tracking-wide uppercase">Contact</h4>
+          <h4 className="text-sm font-semibold text-gold-500 mb-4 tracking-wide uppercase">
+            Contact
+          </h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-gold-500" />{BRAND.email}</li>
-            <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-gold-500" />{BRAND.phone}</li>
-            <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-gold-500" />{BRAND.location}</li>
+            <li className="flex items-start gap-2">
+              <Mail className="h-4 w-4 mt-0.5 text-gold-500" />
+              {BRAND.email}
+            </li>
+            <li className="flex items-start gap-2">
+              <Phone className="h-4 w-4 mt-0.5 text-gold-500" />
+              {BRAND.phone}
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin className="h-4 w-4 mt-0.5 text-gold-500" />
+              {BRAND.location}
+            </li>
           </ul>
         </div>
       </div>
       <div className="border-t border-gold-500/10">
         <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
-          <span>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</span>
+          <span>
+            © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
+          </span>
           <span>Crafted with precision.</span>
         </div>
       </div>

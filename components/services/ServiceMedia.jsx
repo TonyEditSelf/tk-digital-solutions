@@ -32,6 +32,7 @@ export default function ServiceMedia({ title, slug }) {
                 muted={muted}
                 loop
                 playsInline
+                controls
                 className="absolute inset-0 w-full h-full object-cover"
               />
               {/* Mute toggle */}
