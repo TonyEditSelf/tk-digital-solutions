@@ -31,46 +31,75 @@ export default function PricingCard({ plan, variant = "navy" }) {
     ? {
         background: "linear-gradient(180deg, #0E2238 0%, #0B1C2C 100%)",
         border: "1px solid rgba(212, 175, 55, 0.5)",
-        boxShadow: "0 0 60px rgba(212, 175, 55, 0.25), 0 20px 40px rgba(0,0,0,0.4)",
+        boxShadow:
+          "0 0 60px rgba(212, 175, 55, 0.25), 0 20px 40px rgba(0,0,0,0.4)",
       }
     : {};
 
   // Text colors
   const priceColor = isInverted ? "#F8F3E8" : isCream ? "#0B1C2C" : undefined;
-  const taglineColor = isInverted ? "rgba(248,243,232,0.7)" : isCream ? "#5a6a7a" : undefined;
-  const featureColor = isInverted ? "rgba(248,243,232,0.9)" : isCream ? "#1a2c3c" : undefined;
-  const periodColor = isInverted ? "rgba(248,243,232,0.6)" : isCream ? "#5a6a7a" : undefined;
+  const taglineColor = isInverted
+    ? "rgba(248,243,232,0.7)"
+    : isCream
+      ? "#5a6a7a"
+      : undefined;
+  const featureColor = isInverted
+    ? "rgba(248,243,232,0.9)"
+    : isCream
+      ? "#1a2c3c"
+      : undefined;
+  const periodColor = isInverted
+    ? "rgba(248,243,232,0.6)"
+    : isCream
+      ? "#5a6a7a"
+      : undefined;
 
   return (
     <div className={cardClass} style={invertedStyle}>
-      {plan.highlight && (
+      {/* {plan.highlight && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-gold-gradient text-navy-900 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-lg shadow-gold-500/40 whitespace-nowrap">
           <Sparkles className="h-3.5 w-3.5" /> Most Popular
         </div>
-      )}
+      )} */}
 
       <div className="mb-6">
         <div
           className="text-sm uppercase tracking-[0.25em] mb-3 font-semibold"
-          style={{ color: isInverted ? "#D4AF37" : isCream ? "#C9A227" : "#D4AF37" }}
+          style={{
+            color: isInverted ? "#D4AF37" : isCream ? "#C9A227" : "#D4AF37",
+          }}
         >
           {plan.name}
         </div>
         <div className="flex items-baseline gap-1 mb-3">
           <span
-            className={isInverted ? "font-display text-5xl md:text-6xl font-semibold text-gold-gradient" : "font-display text-5xl md:text-6xl font-semibold"}
+            className={
+              isInverted
+                ? "font-display text-5xl md:text-6xl font-semibold text-gold-gradient"
+                : "font-display text-5xl md:text-6xl font-semibold"
+            }
             style={!isInverted && priceColor ? { color: priceColor } : {}}
           >
             {plan.priceLabel}
           </span>
           {plan.period && (
-            <span style={periodColor ? { color: periodColor } : {}} className={!isCream && !isInverted ? "text-muted-foreground" : ""}>
+            <span
+              style={periodColor ? { color: periodColor } : {}}
+              className={!isCream && !isInverted ? "text-muted-foreground" : ""}
+            >
               {plan.period}
             </span>
           )}
         </div>
-        <p className="leading-relaxed" style={taglineColor ? { color: taglineColor } : {}}>
-          <span className={!isCream && !isInverted ? "text-muted-foreground" : ""}>{plan.tagline}</span>
+        <p
+          className="leading-relaxed"
+          style={taglineColor ? { color: taglineColor } : {}}
+        >
+          <span
+            className={!isCream && !isInverted ? "text-muted-foreground" : ""}
+          >
+            {plan.tagline}
+          </span>
         </p>
       </div>
 
@@ -80,14 +109,26 @@ export default function PricingCard({ plan, variant = "navy" }) {
             <div
               className="shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center"
               style={{
-                background: isInverted ? "rgba(212,175,55,0.2)" : "rgba(212,175,55,0.15)",
+                background: isInverted
+                  ? "rgba(212,175,55,0.2)"
+                  : "rgba(212,175,55,0.15)",
                 border: `1px solid rgba(212,175,55,${isInverted ? 0.6 : 0.4})`,
               }}
             >
-              <Check className="h-3 w-3" style={{ color: isInverted ? "#E6C766" : "#C9A227" }} />
+              <Check
+                className="h-3 w-3"
+                style={{ color: isInverted ? "#E6C766" : "#C9A227" }}
+              />
             </div>
-            <span className="text-sm" style={featureColor ? { color: featureColor } : {}}>
-              {!isCream && !isInverted ? <span className="text-foreground/90">{f}</span> : f}
+            <span
+              className="text-sm"
+              style={featureColor ? { color: featureColor } : {}}
+            >
+              {!isCream && !isInverted ? (
+                <span className="text-foreground/90">{f}</span>
+              ) : (
+                f
+              )}
             </span>
           </li>
         ))}
