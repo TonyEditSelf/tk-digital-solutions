@@ -50,7 +50,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link href="/plans" className="relative hidden sm:inline-flex">
+          <Link href="/cart" className="relative sm:inline-flex">
             <Button
               variant="ghost"
               size="icon"

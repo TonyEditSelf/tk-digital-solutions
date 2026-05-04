@@ -19,11 +19,11 @@ export default function PricingCard({ plan, variant = "navy" }) {
 
   // Card wrapper styling
   const cardClass = isInverted
-    ? "relative rounded-3xl p-8 md:p-10 flex flex-col h-full transition-all duration-500 scale-[1.04] gold-border-glow"
+    ? "glass-card-hover relative rounded-3xl p-8 md:p-10 flex flex-col h-full transition-all duration-500 scale-[1.04] gold-border-glow"
     : isCream
-      ? "cream-card relative rounded-3xl p-8 md:p-10 flex flex-col h-full transition-all duration-500"
+      ? "cream-card scale-[1.04] relative rounded-3xl p-8 md:p-10 flex flex-col h-full transition-all duration-500"
       : plan.highlight
-        ? "bg-gradient-to-b from-gold-500/10 to-transparent border border-gold-500/40 gold-border-glow scale-[1.02] relative rounded-3xl p-8 md:p-10 flex flex-col h-full transition-all duration-500"
+        ? "glass-card-hover bg-gradient-to-b from-gold-500/10 to-transparent border border-gold-500/40 gold-border-glow scale-[1.02] relative rounded-3xl p-8 md:p-10 flex flex-col h-full transition-all duration-500"
         : "glass-card glass-card-hover relative rounded-3xl p-8 md:p-10 flex flex-col h-full transition-all duration-500";
 
   // Inline style for inverted (navy) card so we don't need new utility classes
@@ -33,6 +33,7 @@ export default function PricingCard({ plan, variant = "navy" }) {
         border: "1px solid rgba(212, 175, 55, 0.5)",
         boxShadow:
           "0 0 60px rgba(212, 175, 55, 0.25), 0 20px 40px rgba(0,0,0,0.4)",
+        transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
       }
     : {};
 

@@ -1,7 +1,6 @@
 // app/services/[slug]/page.js
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 
 import ServiceHero from "@/components/services/ServiceHero";
 import ServiceMedia from "@/components/services/ServiceMedia";
@@ -28,13 +27,12 @@ const ServicePage = ({ params }) => {
   return (
     <div className="min-h-screen">
       {/* Breadcrumb back link */}
-      <div className="container pt-28 pb-0">
+      <div className="container pt-28">
         <Link
           href="/#services"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold-500 transition-colors"
+          className="inline-flex items-center gap-2 text-md text-muted-foreground hover:text-gold-500 transition-colors"
         >
-          <ArrowLeft className="h-4 w-4" />
-          Back to all services
+          <span className="text-gold-gradient">← Back to 'What I Build'</span>
         </Link>
       </div>
 
@@ -42,8 +40,10 @@ const ServicePage = ({ params }) => {
       <ServiceMedia title={service.title} slug={service.slug} />
       <ServiceDescription service={service} />
 
+      <div className="full-bleed-divider" />
+
       {/* Bottom CTA linking to central plans page */}
-      <section className="py-20">
+      <section className="pt-20">
         <div className="container">
           <div className="glass-card rounded-3xl p-12 md:p-16 text-center max-w-4xl mx-auto relative overflow-hidden">
             <div className="absolute inset-0 animated-gradient-bg opacity-50" />

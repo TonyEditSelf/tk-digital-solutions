@@ -19,7 +19,14 @@ export default function RootLayout({ children }) {
           <Navbar />
           <main className="relative">{children}</main>
           <Footer />
-          <Toaster position="top-right" richColors />
+          <Toaster
+            position="top-right"
+            richColors
+            offset="90px"
+            toastOptions={{
+              style: { top: "66px", right: "27px", position: "fixed" },
+            }}
+          />
         </CartProvider>
       </body>
     </html>

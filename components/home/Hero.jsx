@@ -32,7 +32,7 @@ export default function Hero() {
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] font-semibold mb-6">
-            isibility & conversio
+            Focussed on building
             <br />
             Digital Systems
             <br />

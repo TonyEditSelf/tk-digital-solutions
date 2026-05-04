@@ -17,7 +17,7 @@ export default function ServiceMedia({ title, slug }) {
   }, [videoSrc, slug]);
 
   return (
-    <section className="py-10">
+    <section className="pt-20">
       <div className="container">
         <div
           className="relative w-full rounded-3xl overflow-hidden glass-card group"
@@ -47,9 +47,9 @@ export default function ServiceMedia({ title, slug }) {
                   <Volume2 className="h-4 w-4 text-gold-500" />
                 )}
               </button>
-              <div className="absolute bottom-6 left-6 text-xs text-gold-500/80 tracking-[0.25em] uppercase font-semibold z-10">
+              {/* <div className="absolute bottom-6 left-6 text-xs text-gold-500/80 tracking-[0.25em] uppercase font-semibold z-10">
                 {title} · Reel
-              </div>
+              </div> */}
             </>
           ) : (
             <>

@@ -20,13 +20,13 @@ export default function CTA() {
               Let’s map your current setup, identify gaps, and turn it into a
               system that’s built to scale.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-row gap-4 justify-center">
               <Link href="/contact">
                 <Button
                   size="lg"
                   className="bg-gold-gradient text-navy-900 hover:opacity-90 font-semibold px-8 h-14 text-base gold-border-glow"
                 >
-                  Book a Free Call <ArrowRight className="ml-2 h-5 w-5" />
+                  Book a Call <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/plans">

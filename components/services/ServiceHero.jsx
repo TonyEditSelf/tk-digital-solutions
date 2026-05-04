@@ -21,12 +21,14 @@ export default function ServiceHero({ service }) {
         <div className="max-w-4xl animate-fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-500/30 bg-navy-800/40 backdrop-blur-sm mb-8">
             <Icon className="h-4 w-4 text-gold-500" />
-            <span className="text-xs uppercase tracking-[0.2em] text-gold-400 font-medium">Services</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-gold-400 font-medium">
+              Services
+            </span>
           </div>
           <h1 className="font-display text-5xl md:text-7xl font-semibold leading-[1.05] mb-6">
             <span className="text-gold-gradient">{service.title}</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
             {service.tagline}
           </p>
         </div>
